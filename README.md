@@ -14,7 +14,7 @@
 ### Embedding rates
 by default, each stego app will create 5 stego images from 1 input image at rates: 5%, 10%, 15%, 20%, 25%. You can change this by adding additional parameters in the java command. For example:
 
-	`java -jar SpatialScript.jar message_dictionary test_input stego_output 0.10 0.20 0.02`
+`java -jar SpatialScript.jar message_dictionary test_input stego_output 0.10 0.20 0.02`
 	
 will change the embedding rates to: 10% to 20% at 2% intervals (10%, 12%, 14%, ..., 20%)
 
@@ -22,6 +22,6 @@ will change the embedding rates to: 10% to 20% at 2% intervals (10%, 12%, 14%, .
 ### Validation
 by default, the generated stego images are not validated. You can turn validation on by adding 'true' at the end of the command:
 
-	`java -jar SpatialScript.jar message_dictionary test_input stego_output 0.10 0.20 0.02 true`
+`java -jar SpatialScript.jar message_dictionary test_input stego_output 0.10 0.20 0.02 true`
 	
 Beware that turning validation on will increase the runtime of the script.
