@@ -9,7 +9,6 @@ import java.util.Random;
 
 import util.Images;
 import util.MessageDictionary;
-import util.P;
 
 public class SteganographyM extends AppTemplate {
 	
@@ -35,7 +34,9 @@ public class SteganographyM extends AppTemplate {
 
 	@Override
 	public int getCapacity() {
-		return image.getWidth()*image.getHeight()*3;
+		//NOTE: now only counting 1 capacity for each pixel
+		// we used to count 3 per pixel because the app randomly choose 1 channel from RGB to embed.
+		return image.getWidth()*image.getHeight();
 	}
 	
 
@@ -125,7 +126,6 @@ public class SteganographyM extends AppTemplate {
 			if (currentByte.length()==8)
 			{
 				bytes.add((byte)Integer.parseInt(currentByte, 2));
-				P.p("  [new b] "+bytes.size()+" "+inputLength);
 				if (bytes.size()==4 && !compare(bytes, prefix))
 				{
 					return null;

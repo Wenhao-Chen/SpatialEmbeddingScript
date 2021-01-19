@@ -92,7 +92,7 @@ public abstract class AppTemplate {
 				stats.time = time;
 				stats.saveToFile(statsFile.getAbsolutePath());
 				
-				if (ScriptMain.validate) {
+				if (ScriptMain.Validate) {
 					boolean good = validate(this.getClass(), out, statsFile);
 					if (!good) {
 						P.p("    Failed validation: extracted message different from embedded in stego: "+out.getAbsolutePath());

@@ -25,4 +25,12 @@ public class P {
 	public static void e(String s) {
 		System.err.println(s);
 	}
+	
+	public static void pause(String s) {
+		p(s);
+		try {
+			byte[] c = new byte[10];
+			System.in.read(c);
+		}catch (Exception en ) {}
+	}
 }
